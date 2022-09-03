@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 8 Assignment</title>
+  </head>
+  <body>
+    hello world
+    <script>
+      // Exercises: Level 1
+
+      // 1. Create an empty object called dog
+      let dog = {};
+      // 2. Print the the dog object on the console
+      console.log(dog);
+      // 3. Add name, legs, color, age and bark properties for the dog object. The bark property is a method which return woof woof
+      dog.name = "Bingo";
+      dog.legs = 4;
+      dog.color = "grey";
+      dog.age = 3;
+      dog.bark = function () {
+        return "woof woof";
+      };
+      // 4. Get name, legs, color, age and bark value from the dog object
+      console.log(dog.name);
+      console.log(dog.legs);
+      console.log(dog.age);
+      console.log(dog.color);
+      console.log(dog.bark());
+      // 5. Set new properties the dog object: breed, getDogInfo
+      dog.breed = 'Ibile["Aja ode"-"Hunter\'s breed"]';
+      dog.getDogInfo = function () {
+        return `Name: ${this.name}, Legs: ${this.legs}, Age: ${this.age}, Color: ${this.color}, Breed: ${this.breed}`;
+      };
+
+      // Exercises: Level 2
+      const users = {
+        Alex: {
+          email: "alex@alex.com",
+          skills: ["HTML", "CSS", "JavaScript"],
+          age: 20,
+          isLoggedIn: false,
+          points: 30,
+        },
+        Asab: {
+          email: "asab@asab.com",
+          skills: [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Redux",
+            "MongoDB",
+            "Express",
+            "React",
+            "Node",
+          ],
+          age: 25,
+          isLoggedIn: false,
+          points: 50,
+        },
+        Brook: {
+          email: "daniel@daniel.com",
+          skills: ["HTML", "CSS", "JavaScript", "React", "Redux"],
+          age: 30,
+          isLoggedIn: true,
+          points: 50,
+        },
+        Daniel: {
+          email: "daniel@alex.com",
+          skills: ["HTML", "CSS", "JavaScript", "Python"],
+          age: 20,
+          isLoggedIn: false,
+          points: 40,
+        },
+        John: {
+          email: "john@john.com",
+          skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
+          age: 20,
+          isLoggedIn: true,
+          points: 50,
+        },
+        Thomas: {
+          email: "thomas@thomas.com",
+          skills: ["HTML", "CSS", "JavaScript", "React"],
+          age: 20,
+          isLoggedIn: false,
+          points: 40,
+        },
+        Paul: {
+          email: "paul@paul.com",
+          skills: [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "MongoDB",
+            "Express",
+            "React",
+            "Node",
+          ],
+          age: 20,
+          isLoggedIn: false,
+          points: 40,
+        },
+      };
+
+      // 1. Find the person who has many skills in the users object.
+      let object = Object.entries(users);
+      let personWithMostSkills = '';
+      let skillCounts = 0;
+      for (let i = 0; i < object.length; i++) {
+        const element = object[i][1].skills.length;
+        if (skillCounts<= element){
+          skillCounts = element;
+          personWithMostSkills = object[i][0];
+        }
+      }
+      console.log(personWithMostSkills);
+      // console.log(object);
+
+      // 2. Count logged in users, count users having greater than equal to 50 points from the following object.
+      let logCount = 0;
+      let pointCount = 0;
+      for (let i = 0; i < object.length; i++) {
+        const loggedIn = object[i][1].isLoggedIn;
+        const point = object[i][1].points;
+        if (loggedIn) {
+          logCount++;
+        }
+        if (point>=50) {
+          pointCount++;
+        }
+      }
+      console.log(logCount);
+      console.log(pointCount);
+
+      // 3. Find people who are MERN stack developer from the users object
+      let peopleWithMERNStack = [];
+      for (let i = 0; i < object.length; i++) {
+        const element = object[i][1].skills;
+        if (element.includes("JavaScript")&&element.includes("Express")&&element.includes("React")&&element.includes("Node")){
+          peopleWithMERNStack.push(object[i][0])
+        }
+      }
+      console.log(peopleWithMERNStack);
+      
+      // 4. Set your name in the users object without modifying the original users object
+      // let newUsers = users;
+      // newUsers.Aanu ={
+      //   email: "aanu@aanu.com",
+      //     skills: [
+      //       "HTML",
+      //       "CSS",
+      //       "Bootstrap",
+      //       "JavaScript",
+      //     ],
+      //     age: 25,
+      //     isLoggedIn: true,
+      //     points: 40,
+      // };
+      // console.log(newUsers);
+      // console.log(users);           //wrong
+
+
+      // 5. Get all keys or properties of users object
+      let allKeys = Object.keys(users);
+      console.log(allKeys);
+
+      // 6. Get all the values of users object
+      let allValues = Object.values(users);
+      console.log(allValues);
+
+      // 7. Use the countries object to print a country name, capital, populations and languages.
+
+     
+
+      // Exercises: Level 3
+      // 1. Create an object literal called personAccount. It has firstName, lastName, incomes, expenses properties and it has totalIncome, totalExpense, accountInfo,addIncome, addExpense and accountBalance methods. Incomes is a set of incomes and its description and expenses is a set of incomes and its description.
+      let personAccount = {
+        firstName: 'Aanu',
+        lastName: 'Akinyemi',
+        incomes: [
+          {"income": 21000},
+          {"income": 50000},
+          {"income": 2000},
+          {"income": 11000},
+          {"income": 37000},
+        ],
+        expenses:[
+          {'month': 14000},
+          {'month': 10000},
+          {'month': 1000},
+          {'month': 14000},
+          {'month': 14000},
+        ],
+        totalIncome : function(){
+          let total = 0;
+          for (let i = 0; i < this.incomes.length; i++) {
+            const element = this.incomes[i].income;
+            total+=element;
+          }
+          return total;
+        },
+        totalExpenses : function(){
+          let total = 0;
+          for (let i = 0; i < this.expenses.length; i++) {
+            const element = this.expenses[i].month;
+            // console.log(element);
+            total+=element;
+          }
+          // console.log(total);
+          return total;
+        },
+        addIncome : function(incomeType, incomeAmount){
+          let type = incomeType;
+          let amount = incomeAmount;
+          this.incomes.push({type:amount});
+          return this.incomes;
+        },
+        addExpenses : function(expensesType, expensesAmount){
+          let type = expensesType;
+          let amount = expensesAmount;
+          this.expenses.push({type:amount});
+          return this.expenses;
+        },
+        accountBalance : function(){
+          let income = this.totalIncome()
+          let expenses = this.totalExpenses()
+          return (income-expenses);
+        },
+        accountInfo : function(){
+          let balance = personAccount.accountBalance();
+          return `Name: ${this.firstName}  ${this.lastName}, Account balance:  ${balance}`
+        }
+        
+      }
+      console.log(personAccount.accountInfo());
+      console.log(personAccount.accountBalance());
+      console.log(personAccount.addExpenses(prompt('expenses type'), parseInt(prompt('enter expenses amount'))));
+      console.log(personAccount.addIncome(prompt('income type'), parseInt(prompt('enter income amount'))));
+      let a = personAccount.totalExpenses();
+      let b = personAccount.totalIncome();
+      console.log(a);
+      console.log(b);
+
+
+
+      // **** Questions:2, 3 and 4 are based on the following two arrays:users and products ()
+      const users2 = [
+    {
+        _id: 'ab12ex',
+        username: 'Alex',
+        email: 'alex@alex.com',
+        password: '123123',
+        createdAt:'08/01/2020 9:00 AM',
+        isLoggedIn: false
+    },
+    {
+        _id: 'fg12cy',
+        username: 'Asab',
+        email: 'asab@asab.com',
+        password: '123456',
+        createdAt:'08/01/2020 9:30 AM',
+        isLoggedIn: true
+    },
+    {
+        _id: 'zwf8md',
+        username: 'Brook',
+        email: 'brook@brook.com',
+        password: '123111',
+        createdAt:'08/01/2020 9:45 AM',
+        isLoggedIn: true
+    },
+    {
+        _id: 'eefamr',
+        username: 'Martha',
+        email: 'martha@martha.com',
+        password: '123222',
+        createdAt:'08/01/2020 9:50 AM',
+        isLoggedIn: false
+    },
+    {
+        _id: 'ghderc',
+        username: 'Thomas',
+        email: 'thomas@thomas.com',
+        password: '123333',
+        createdAt:'08/01/2020 10:00 AM',
+        isLoggedIn: false
+    }
+    ];
+
+    const products = [
+  {
+    _id: 'eedfcf',
+    name: 'mobile phone',
+    description: 'Huawei Honor',
+    price: 200,
+    ratings: [
+      { userId: 'fg12cy', rate: 5 },
+      { userId: 'zwf8md', rate: 4.5 }
+    ],
+    likes: []
+  },
+  {
+    _id: 'aegfal',
+    name: 'Laptop',
+    description: 'MacPro: System Darwin',
+    price: 2500,
+    ratings: [],
+    likes: ['fg12cy']
+  },
+  {
+    _id: 'hedfcg',
+    name: 'TV',
+    description: 'Smart TV:Procaster',
+    price: 400,
+    ratings: [{ userId: 'fg12cy', rate: 5 }],
+    likes: ['fg12cy']
+  }
+]
+      // 2. Imagine you are getting the above users collection from a MongoDB database. a. Create a function called signUp which allows user to add to the collection. If user exists, inform the user that he has already an account. b. Create a function called signIn which allows user to sign in to the application
+
+      
+      function signUp() {
+        let email = prompt('email');
+        let username = prompt('username');
+        let password= prompt('password');
+        let found = false;
+        for (let i = 0; i < users2.length; i++) {
+          const element = users2[i];
+          if((element.username == username && element.email == email)|| element.email == email){
+            found = true;
+          } else{
+            found = false;
+          }
+          if (found) {
+            return 'You already have an account...Kindly login'
+          }else{
+            return 'Sign up successful'
+          }
+        }
+      }
+      function login(){
+        let email = prompt('email');
+        let password= prompt('password');
+        let found = false;
+        for (let i = 0; i < users2.length; i++) {
+          const element = users2[i];
+          if((element.password == password && element.email == email)){
+            found = true;
+          } else{
+            found = false;
+          }
+          if (found) {
+            return 'Login successful'
+          }else{
+            return 'You do not hava an account with us, kindly sign up'
+          }
+        }
+      }
+      console.log(signUp());
+      console.log(login());
+
+      // 3. The products array has three elements and each of them has six properties. a. Create a function called rateProduct which rates the product b. Create a function called averageRating which calculate the average rating of a product
+      function rateProduct() {
+        let id = prompt('enter product id. Options[eedfcf, aegfal, hedfcg]');
+        let userId= prompt('enter user ID');
+        let rate= prompt('Rate between 1 - 5');
+        let found = false;
+        for (let i = 0; i < products.length; i++) {
+          const element = products[i];
+          if (element._id == id) {
+            found = true;
+            if (found) {
+              products[i].ratings.push({userId, rate});
+              return 'Thanks for rating us.';
+            } 
+            break;
+          } else {
+            found = false;
+            if (!found) {
+              return 'Product not found';
+            }
+          }
+        }
+        
+      }
+      console.log(rateProduct());
+
+      function averageRating() {
+        let totalRating = 0;
+        for (let i = 0; i < products.length; i++) {
+          const element = products[i].ratings;
+          for (let j = 0; j < element.length; j++) {
+            const eachRating = element[j];
+            totalRating+=eachRating.rate;
+            
+          }
+          return totalRating/products[i].ratings.length
+        }
+      }
+      console.log(averageRating());
+
+      // 4. Create a function called likeProduct. This function will helps to like to the product if it is not liked and remove like if it was liked.
+      function likeProduct() {
+        let id = prompt('enter your ID...');
+        for (let i = 0; i < products.length; i++) {
+          const element = products[i];
+          if (element.likes.includes(id)) {
+            products[i].likes.splice();
+          } else {
+            products[i].likes.push(id);
+          }
+        } 
+      }
+      console.log(likeProduct());
+    </script>
+  </body>
+</html>

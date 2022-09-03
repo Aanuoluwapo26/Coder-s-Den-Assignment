@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>JS-7</title>
+</head>
+<body>
+<script>
+
+	//DAY 7
+
+	//1
+	// declare a function fullName and print it out your full name.
+
+	function fullName() {
+		let firstName = 'Aanuoluwapo'
+		let middleName = 'Hannah'
+		let lastName = 'Akinyemi'
+		let space = ' '
+		let all = firstName + space + middleName + space + lastName
+		console.log(all);
+	}
+	 fullName();
+
+	 //2
+	 //declare a function fullName and now it takes firstName, lastName as a parameter and it returns your full-name.
+
+	 function fullName2(firstName, lastName){
+	 	let fName = 'Aanuoluwapo'
+	 	let lName = 'Akinyemi'
+	 	let gap = ' '
+	 	let allName = fName + gap + lName
+	 	return (allName)
+	 }
+	 console.log(fullName2());
+
+	 //3
+	 //declare a function addNumbers and it takes two two parameters and it returns sum.
+
+	 function addNumbers (num1, num2){
+	 	let numm1 = 5+7
+	 	let numm2 = 2+7
+	 	let sum = numm1+numm2
+	 	return(sum)
+	 }
+	 console.log(addNumbers());
+
+	 	//4
+	 	//An area of a rectangle is calculated as follows; area= lenght*widt. write a function which calculates areaOfRectangle.
+
+	 	function areaOfRectangle(lenght, breath){
+	 		let lenghty = lenght * breath
+	 		
+	 		let sum = (lenght*breath)
+	 		console.log(sum)
+	 	}
+	 	areaOfRectangle(10,20);
+
+
+
+	 	//5
+	 	//Aperimeter of a rectangle is calculated as follows: perimeter=2x(lenght+width). erite a function which calculates perimeterOfRectangle.
+
+	 	function perimeterOfRectangle(lenght2, breath2){
+	 		let lent = lenght2 + breath2
+	 		let summing = 2*(lenght2+breath2)
+	 		console.log (summing)
+	 	}
+	 	perimeterOfRectangle(10,10);
+
+	 	//6
+	 	//A volume of a rectangle prism is calculated as follows: volume=lenghtxwidthxheight. write a function which calculates volumesOfRectPrism.
+
+	 	function volumeOfRectPrism(lenght,breath,height){
+	 		let vol = lenght*breath*height
+	 		console.log(vol)
+	 	}
+
+	 	volumeOfRectPrism(2,2,2);
+
+	 	// 7
+	 	// Area of a circle is calculated as follows: area=Math.PIxrxr. write a function which calculates areaOfCircle.
+
+	 	function areaOfCircle(r){
+	 		let area = Math.PI * r * r
+	 		console.log(area)
+	 	} 
+	 	areaOfCircle(2);
+
+			
+		
+	 	//8
+	 	// Circumference of a circle is calculated as follows: circumference=2PIr. erite a function which calculates circumOfCircle.
+
+	 	function circumOfCircle(r){
+	 		let circum = 2*Math.PI*r
+	 		return circum
+	 	}
+	 	console.log(circumOfCircle(3));
+
+	 	//9
+
+	 	//density of a substance is calculated as follows: density=mass/volume. write a function which calculates density.
+
+	 	function density(mass,volume){
+	 		let massAndVolume = mass%volume
+	 		return massAndVolume
+	 	}
+	 	console.log(density(4,8));
+
+
+	 	//10
+	 	//Speed is calculated by dividing the total distance covered by a moving object divided by the total amount of time taken. write a fuction which calculates speed of a moving object, speed = td/tt
+
+	 	function speed(tdistance, ttaken){
+	 		let speeds = tdistance%ttaken
+	 		return speeds
+	 	}
+	 	console.log(speed(10,30));
+
+	 	//11
+	 	//Weight of a substance is calculated as follows: weight=massxgravity. write a function which calculates weight.
+
+	 	function weight(mass, gravity =9.81){
+	 		let total = mass*gravity
+	 		return total
+	 	}
+	 	console.log(weight(10));
+
+	 	//12
+	 	//Temperature in oC can been converted to oF using this formula: oF=(oCx9/5)+32. write a fuction which covert oC to oF . convertCelciusToFarenheit.
+
+	 	function convertCelciusToFarenheit(oC){
+	 		let degreeFarenheit =(oC*9%5)+32
+	 		return degreeFarenheit
+	 	}
+	 	console.log(convertCelciusToFarenheit(4));
+
+	 	//13
+	 	//body mass index(IBM) is calculated as follows: bmi=weight in kg/(heightxheight) in m^2. write a fuction which calculates bmi.BMIis used to broadly define different weight groups in adult 20 years old or older. check if a person is underweight or normal, overweight or obese based on the information given below.
+	 	//a. the same groups apply to both men and women. b. underweight:BMI is less than 18.5. c. normal weight:BMIis 18.5 to 24.9 d. overweight:BMI is 25 to 29.9 e. obese: BMI is 30 or more.
+
+	 	// function bmi (weight, height){
+	 	// 	let both = weight%(height*height)
+	 	// 	return both
+	 	// }
+	 	// console.log(bmi(10,10));
+	 	let both;
+	 	function bmiTotal(weight, height){
+	 		both = weight/(height*height)
+	 		return both;
+	 	}
+	 	console.log(`BMI result: ${bmiTotal(64,1.6)}`);
+	 	if (both<18.5) {
+	 		console.log('Patient is underweight');
+	 	}else if(both>=18.5 && both <25) {
+	 		console.log('Patient is normal');
+	 	}else if(both>=25 && both <=29.9) {
+	 		console.log('Patient is overweight');
+	 	}else{
+	 		console.log('Patient is obese');
+	 	}
+
+
+	 	//14
+	 		
+
+	 function checkSeason(month){
+	 	
+	 	// return seasons
+	 	if (month.toLowerCase() == 'november' || month.toLowerCase() == 'december' || month.toLowerCase() == 'january') {
+	 		return "Winter";
+	 	} else if (month.toLowerCase() == 'febuary' || month.toLowerCase() == 'march' || month.toLowerCase() == 'april') {
+	 		return "Spring";
+	 	} else if (month.toLowerCase() == 'may' || month.toLowerCase() == 'june' || month.toLowerCase() == 'july') {
+	 		return "Autumn";
+	 	}else{
+	 		return "Summer";
+	 	}
+	 }
+	 
+	 console.log(checkSeason(prompt('enter month')))
+
+	 //15
+	 // math.max returns its largest argument. write a fuction findMax that takes three arguments and returns their maximum without using Math.max method.
+
+	 function findMax(a=0, b=0, c=0){
+	 	let max = a;
+	 	if (max<b) {
+	 		max = b;
+	 	}
+	 	if(max<c){
+	 		max = c
+	 	}
+	 	return max;
+	 }
+
+	 console.log(findMax(2100,23,900));
+
+	// level 2 day 7
+
+	//1 
+		//Linear equation is calculated as follows: ax + by + c = 0. Write a function which calculates value of a linear equation, solveLinEquation.
+	 const solveLinEquation = (a,b,c) => {
+	   const slope = a/b  
+	   const intercept = -c/b 
+	   console.log(slope, intercept)
+	 }
+		solveLinEquation(2, 5, -7)
+
+		//2
+
+		//Quadratic equation is calculated as follows: ax2 + bx + c = 0. Write a function which calculates value or values of a quadratic equation, solveQuadEquation.
+		const solveQuadEquation = (a,b,c) => {
+		  const iDontKnowThis = Math.pow(b, 2) - 4 * a * c ;
+		    let x1 = (-1 * b + Math.sqrt(iDontKnowThis)) / 2 * a ;
+		    let x2 = (-1 * b - Math.sqrt(iDontKnowThis)) / 2 * a ;
+		    return x1.toFixed(2) + " and " + x2.toFixed(2) ;
+		}
+		console.log(solveQuadEquation(1, -1, -2));
+
+
+
+	 //3
+	 //Declare a function name printArray. It takes array as a parameter and it prints out each value of the array.
+
+	 			 let arrayed  =  [5,8,9,2,1,4]
+			const printArray = (arr) => {
+			  for(let num of arr) {
+			    console.log(num)
+			  }
+			}
+			printArray(arrayed)
+
+
+
+	 //4. 
+	 //Write a function name showDateTime which shows time in this format: 08/01/2020 04:08 using the Date object.
+
+	 function showDateTime(){
+	 	let today = new Date();
+	 	let h = today.getHours();
+	 	let m = today.getMinutes();
+	 	let s = today.getSeconds();
+	 	let d = today.getDate();
+	 	let mon = today.getMonth();
+	 	let y = today.getFullYear();
+
+	 	console.log(`${d}/${mon}/${y} ${h}:${m}`)
+	 }
+	 showDateTime();
+
+		//5
+		//Declare a function name swapValues. This function swaps value of x to y.
+		const swapValues = (x, y) => {
+		  return `x = ${y}, y = ${x}`
+		}
+		console.log(swapValues(30, 50))
+ 
+
+
+
+
+		//6
+		//Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the array (don't use method).
+
+		let normalArray = [1,2,3,4,5,6,7,8,9];
+		let reverseArray = [];
+
+
+		for (let i = normalArray.length-1; i >= 0; i--) {
+			reverseArray.push(normalArray[i]);
+		}
+		console.log(reverseArray);
+
+		//7
+		//declare a function name capitalizedArray. it takees array as a parameter and it returns the capitalizedArray
+
+
+		let mine = ['mercy', 'hannah', 'akinyemi']
+		newMine = []
+		for(let i = 0; i<mine.length; i++){
+			newMine.push(mine[i].toUpperCase())
+		}
+		console.log(newMine);
+
+		//8
+		//Declare a function name addItem. It takes an item parameter and it returns an array after adding the item
+		let itemToAdd =  []
+		const addItem = (...item) => {
+		  itemToAdd.push(...item)
+		  console.log(itemToAdd)
+		}
+		addItem('potato', 'sugar', 'xyz', 'honey')
+
+		//9
+
+		//Declare a function name removeItem. It takes an index parameter and it returns an array after removing an item
+		let items =  [3, 7, 10, 23, 57]
+		const removeItem = (index) =>{
+		  items.splice(index, 1);
+		  return items
+		}
+		console.log(removeItem(2))
+
+
+
+
+
+		//10
+		//Declare a function name sumOfNumbers. It takes a number parameter and it adds all the numbers in that range.
+		function sumOfNumbers(num){
+			let sum = 22;
+			for (var i = 0; i < num; i++) {
+				sum+=i;
+			}
+			console.log(sum);
+
+		}
+		sumOfNumbers(prompt('enter num...'));
+
+
+			//11
+			//Declare a function name sumOfOdds. It takes a number parameter and it adds all the odd numbers in that - range.
+			sum = 0
+			const sOfOd = (number) =>{
+			  for(let i = 0; i <= number;  i++){
+			    if ( i % 2 === 1){
+			      sum += i
+			    }
+			  }
+			  return sum
+			}
+			console.log(sOfOd(100))
+
+			//12
+
+			//Declare a function name sumOfEven. It takes a number parameter and it adds all the even numbers in that - range.
+			sum = 0
+			const sumOfEven = (number) =>{
+			  for(let i = 0; i <= number;  i++){
+			    if ( i % 2 === 0){
+			      sum += i
+			    }
+			  }
+			  return sum
+			}
+			console.log(sumOfEven(100))
+
+			//13
+
+			//Declare a function name evensAndOdds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+			/*evensAndOdds(100);
+			The number of odds are 50.
+			The number of evens are 51.*/
+			let odds = []
+			let even = []
+			const evensAndOdds = (number)=> {
+			  for(let i = 0; i <= number;  i++){
+			    if ( i % 2 === 0){
+			      even.push(number[i])
+			    }
+			    else if( i % 2=== 1 ){
+			      odds.push(number[i])
+			    }
+			  }
+			  return `The number of odds are ${odds.length}, the number of evens are ${even.length} `
+			}
+			console.log(evensAndOdds(100))
+
+			//14
+
+			//Write a function which takes any number of arguments and return the sum of the arguments
+			sum = 0
+			const sumOfArguments = (...number) =>{
+			  for(const num of number){
+			    sum += num
+			  }
+			  return sum
+			}
+			console.log(sumOfArguments(2,3,6,8,10))
+
+			//15
+
+			//Writ a function which generates a randomUserIp.
+			let randomUserIp = ()  =>{
+			  let userIp = (Math.floor(Math.random() * 256) + 1)+"."+(Math.floor(Math.random() * 256))+"."+(Math.floor(Math.random() * 256))+"."+(Math.floor(Math.random() * 256)) 
+			  console.log(userIp ) 
+			};
+			randomUserIp()
+
+			//16
+
+			//Write a function which generates a randomMacAddress
+			let addresses = []
+			const randomMacAddress = () => { 
+			  for(let i = 0; i <= 6; i++){
+			    addresses.push(('00'+ Math.floor(Math.random() * 23).toString(16)).slice(-2))
+			  }
+			  let [a,b,c,d,e,f] = addresses
+			  return `${a}:${b}:${c}:${d}:${e}:${f}:`
+			}
+			console.log(randomMacAddress())
+
+
+				//17
+			//Declare a function name randomHexaNumberGenerator. When this function is called it generates a random hexadecimal number. The function return the hexadecimal number.
+			const randomHexaNumberGenerator = function () { 
+			  return `#${Math.floor(Math.random() * 0xabcdef).toString(16).padEnd(6, "0")}`;
+			}
+			console.log(randomHexaNumberGenerator());
+
+			//18
+			//Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.// 41XTDbE
+
+			const userIdGenerator = () => {
+			  return `${Math.floor(Math.random() * 0XABCEFD).toString(16).padEnd(7, '0')}`;  
+			}
+			console.log(userIdGenerator())
+
+			//Exercises: Level 3 day 7
+			//Modify the userIdGenerator function. Declare a function name userIdGeneratedByUser. It doesn’t take any parameter but it takes two inputs using prompt(). One of the input is the number of characters and the second input is the number of ids which are supposed to be generated.
+			const userIdGeneratedByUser = (CharactersNo, IdsNo) => {
+			  let userIdentity = []
+			  const idGenerator = () => {
+			    let characters = '' 
+			    for (let m = 0; m < CharactersNo; m++ ){
+			      if(characters.length < CharactersNo){
+			        characters += Math.floor(Math.random() * 100000).toString(16)
+			      }
+			    }
+			    return characters.slice(0, CharactersNo) 
+			  }
+			  for (let o = 0; o < IdsNo; o++ ){ 
+			    userIdentity.push(idGenerator())
+			  }
+			  return userIdentity
+			}
+			console.log(userIdGeneratedByUser(5, 2));
+
+
+			//2
+
+
+			//Write a function name rgbColorGenerator and it generates rgb colors.
+			let random  = (element) => {
+			  return Math.round(Math.random() * element + 1)
+			}
+			const rgbColorGenerator = () =>{
+			  return `rgb (${random(255)},${random(255)},${random(255)})`
+			}
+			console.log(rgbColorGenerator())
+
+			//3
+
+			//Write a function arrayOfHexaColors which return any number of hexadecimal colors in an array.
+			let hexcolors = []
+			let up = 0
+			const arrayOfHexaColors = () => {
+			  while(up < 5){
+			         hexcolors.push(Math.floor(Math.random() * 0xabcdef).toString(16).padEnd(6, "0"))
+			       up++
+			    }
+			   return hexcolors  
+			}
+
+			console.log(arrayOfHexaColors())
+
+			//4
+
+			//Write a function arrayOfRgbColors which return any number of RGB colors in an array.
+			let roygbiv = Math.round(Math.random() * 255 + 1)
+			let rgbcolors = []
+			let mope = 0
+			const arrayOfRgbColors = () => {
+			  while(mope < 5){
+			         rgbcolors.push([`RGB: ${Math.round(Math.random() * 255 + 1)}, ${Math.round(Math.random() * 255 + 1)}, ${Math.round(Math.random() * 255 + 1)}`])
+			       mope++
+			    }
+			   return rgbcolors  
+			}
+			console.log(arrayOfRgbColors())
+
+			//5
+
+			//Write a function convertHexaToRgb which converts hexa color to rgb and it returns an rgb color.
+			 const convertHexaToRgb = (hexa) => {
+			  let red = parseInt(hexa[1]+hexa[2],16);
+			  let green = parseInt(hexa[3]+hexa[4],16);
+			  let blue = parseInt(hexa[5]+hexa[6],16);
+			  return `rgb (${red},${green},${blue})`
+			}
+
+			console.log(convertHexaToRgb('#a3e12f'));
+
+			//6
+
+			//Write a function convertRgbToHexa which converts rgb to hexa color and it returns an hexa color.
+			const  colorToHex = (each) => {
+			  let hexa = each.toString(16);
+			 return hexa.length == 1 ? "0" + hexar : hexa;
+			}
+
+			const convertRgbToHexa = (red, green, blue) => {
+			    return "#" + colorToHex(red) + colorToHex(green) + colorToHex(blue);
+			}
+
+			console.log(convertRgbToHexa(163, 225, 47));
+
+			
+				//8
+			//Call your function shuffleArray, it takes an array as a parameter and it returns a shuffled array
+			const arraysOfNumbers = [10, 23, 9, 24, 2];
+			const shuffleArray = (array) => {
+			  return array.sort((a, b) => Math.random() - 0.5);
+			}
+			console.log(shuffleArray(arraysOfNumbers))
+
+			//9
+			//Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
+
+			const factorial = (whole) => {
+			  if (whole === 0 || whole ===1 ) { 
+			    return 1
+			  }else if( whole > 1){ 
+			    for(let i = whole - 1; i > 1; i-- ){
+			      whole *= i
+			    }
+			    return whole
+			  }
+			}
+			console.log(factorial(15))
+
+			//10
+
+			 
+			 //Call your function isEmpty, it takes a parameter and it checks if it is empty or not
+			 const isEmpty = (empty) => {
+			  return (empty === undefined || empty == null || empty.length === 0) || (typeof empty === 'string' && empty.trim().length === 0) ||(empty.constructor === Object && Object.keys(empty).length === 0) ? true : false;
+			}
+			console.log(isEmpty())
+
+			//11
+
+			//Call your function sum, it takes any number of arguments and it returns the sum.
+			add = 0
+			const suming = (...optional) =>{
+			  for(const each of optional){
+			    add += each
+			  }
+			  return add
+			}
+			console.log(suming(4,7,4,7,30))
+
+			//12
+
+			//Write a function called sumOfArrayItems, it takes an array parameter and return the sum of all the items. 
+			plus = 0
+			const arrayss = [2, 8, 9, 10, 56, 63]
+			const sumOfArrayItems = (solve) => {
+			  for(let p = 0; p < arrayss.length; p++){
+			    if(typeof solve[p] === 'number'){
+			      plus += solve[p]
+			    }else {
+			      return 'arrays aint numbers'
+			    }
+			  }
+			  return plus
+			}
+			console.log(sumOfArrayItems(arrayss))
+
+			//14
+
+			
+			//Write a function called isPrime, which checks if a number is prime number.
+			//since i will always be less than the parameter the condition  will never allow parameter to be divisible by itself and when parameter is divisible by i then the number is an even number.
+			//the number also must be greater than 1 reason for the number > 2 instead of true but true still remains the same.
+			const isPrime = (isit) => {
+			  for (let i = 2; i < isit; i++) {
+			    if(isit % i === 0) return false
+			  }
+			  return isit > 2
+			}
+			console.log(isPrime(2))
+
+			//15
+
+			//Write a functions which checks if all items are unique in the array.
+			const unique = (array) => array.length === new Set(array).size
+			console.log(unique([1,1,2,3]));
+
+			//16
+			//Write a function which checks if all the items of the array are the same data type.
+			const same = [10, 8, 9, 4, 5];
+			const checks = [1, "anny", false, 3, "omoo", 777];
+			const arrayType = (arr, typeOfIt) => {
+			  return arr.filter(i => typeof i === typeOfIt).length === arr.length;
+			}
+			console.log(arrayType(same, 'number')); 
+			console.log(arrayType(checks, 'string'));
+
+			//19
+			//Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
+			const sevenRandomNumbers = ()  => {
+			let range = new Set();
+			while (range.size <= 7) {
+			  range.add(Math.trunc(Math.random() * 10) | 0);
+			}
+			let randomArray = [...range];
+			return randomArray
+			}
+			console.log(sevenRandomNumbers())
+
+			//20
+
+			//Write a function called reverseCountries, it takes countries array and 
+			//first it copy the array and returns the reverse of the original array
+			const countries = [
+			  'Albania',
+			  'Bolivia',
+			  'Canada',
+			  'Denmark',
+			  'Ethiopia',
+			  'Finland',
+			  'Germany',
+			  'Hungary',
+			  'Ireland',
+			  'Japan',
+			  'Kenya'
+			]
+			const reverseCountries = (all) => {
+			  const modifiedCountry = [...countries].reverse()
+			  console.log(modifiedCountry)
+			}
+			reverseCountries()
+
+
+</script>
+</body>
+</html>

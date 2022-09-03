@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>day 9 Assignment</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	//1
+
+	//forEach: its used for Only Arrays. it takes a callback function with elements, index parameter and array array itself. the index and the array is optional.
+
+	//map: Iterate an array elements and modify the array elemets. it takes a callback function with elements, index, array parameter and return a new array.
+
+	//filter: filter out items which fullfill its conditions and return a new array.
+
+	//reduce: reduces takes a callback function. The call back function takes accumulator, current and optional initial value as a parameter and returns a single value. without the initial value/parameter for the accumulator, by default accumulator will get the arrays first value and if array is empty javascript throws error.
+
+	//2
+
+	//A callback function which can be passed as a parameter to other function.
+
+	//3
+	 //use forEach to console.log each country in the countries array.
+
+	 
+	 const countries = ['Finland', 'Sweden', 'Denmark','Norway', 'Iceland']
+
+	 let returnedd = countries.forEach(function (each){console.log(each)})
+	
+
+	 
+	 // countries.forEach((each)=>console.log(each))
+
+	 //4
+	 //Use forEach to console.log each number in the number arrays.
+
+	 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+	let bool = numbers.forEach(function(solt){console.log(solt)})
+	 // numbers.forEach(num=>console.log(num))
+
+	 //5 
+	 //use forEach to console.log each name in the names array.
+	 const names = ['Akinyemi', 'Aanuoluwapo', 'Hannah', 'Adejoke']
+	 
+	 let neew = names.forEach(function(different){console.log(different)})
+	 
+	 // names.forEach((mine)=>console.log(mine))
+
+	 //6
+	 //use map to create an array of countries lenght from countries array.
+
+	 const countries2 = ['Finland', 'Sweden', 'Denmark','Norway', 'Iceland']
+	 let supper = countries2.map(function(nop){console.log(nop)})
+	 // countries2.map(numm=>console.log(numm))
+
+	 //7
+	 //use map create an array of countries lenght
+	 // const countries3 = ['Finland', 'Sweden', 'Denmark','Norway', 'Iceland']
+	 // let len = countries3.map(each=>each.lenght
+	 // console.log(len)
+
+	 //8
+	 //us map to craete a new array by changing each number to square in the numbers array.
+
+	 	 const number2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+	 	 let change =number2.map((tall)=>tall * tall)
+	 	 console.log(change)
+
+	 	 //9
+	 	 //use map to change each name to uppercase in the names array
+
+	 	 	 const names2 = ['Akinyemi', 'Aanuoluwapo', 'Hannah', 'Adejoke']
+	 	 	 let naming = names2.map((name)=>name.toUpperCase())
+	 	 	 console.log(naming)
+
+	 	 	 // 10
+	 	 	 // use map to map the products array to its corresponding prices.
+	 	 	 const products= [
+	 	 	 {product: 'banana', price:3},
+	 	 	 {product: 'mango', price:6},
+	 	 	 {product: 'potato', price:' '},
+	 	 	 {product: 'avocado', price:8},
+			 {product: 'coffe', price:10},
+			 {product: 'tea', price:''}]
+
+	 	 
+
+
+
+	 
+
+	 //
+
+	 //18
+	 //use reduce to sum concatenate all the countries and to produce this sentence: Estonia, Finland, Sweden, Denmark, Norway, and Iceland are north European countriesb 
+
+	  function join(arr){
+
+	  }
+	 
+	
+	
+</script>
+</body>
+</html>

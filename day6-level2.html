@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Hello world...
+
+
+    <script>
+       //exercise: level 2 DAY 6
+                // develop a small script which generate any number of characters random id:
+                
+                // 1. Random id
+        let characters = '1234567890abcdefghijklmnopqrstuvwxyz';
+        let id ='';
+        let split = characters.split('');
+        for (let i = 0; i < 20; i++) {
+            if (id.length<=20) {
+                id += split[(Math.random()*35).toFixed()]
+            }
+        }
+        console.log(id);
+
+        //write a script which generate a random hexadecimal number.
+
+
+        // 2. Hexadecimal
+        let hexChars = '1234567890abcdef';
+        let hexadecimal = '#';
+        let splitHex = characters.split('');
+        for (let i = 0; i < 6; i++) {
+            if (hexadecimal.length<=7) {
+                hexadecimal += splitHex[(Math.random()*15).toFixed()]
+            }
+        }
+        console.log(hexadecimal);
+
+
+        //3
+        //writw a script which generates a random rgb color number
+        let rand = [240, 180, 180];
+        let empty = " ";
+        let splitt = characters.split('');
+        for (let i = 0; i <=2; i++) {
+            if (empty.length<=3) {
+                empty += splitt[(Math.random()*240).toFixed()]
+            }
+        }
+
+        console.log(empty);
+         
+
+
+
+
+            
+
+                //4
+                //using the above countries array, create the following new array.
+
+                let countries = [
+                  "Albania",
+                  'Bolivia',
+                  'Canada',
+                  'Denmark',
+                  'Ethiopia',
+                  'Finland',
+                  'Germany',
+                  'Hungary',
+                  'Ireland',
+                  "Japan",
+                  "Kenya"
+                ]
+
+                NewCountries = [];
+                for ( let y = 0; y<countries.length; y++){
+                    NewCountries.push(countries[y].toUpperCase())
+                }
+                console.log(NewCountries);
+
+
+
+                //5
+                ///using the above countries array, create an array for countries lenght.
+
+                let county = [
+                  "Albania",
+                  'Bolivia',
+                  'Canada',
+                  'Denmark',
+                  'Ethiopia',
+                  'Finland',
+                  'Germany',
+                  'Hungary',
+                  'Ireland',
+                  "Japan",
+                  "Kenya"]
+                  
+                for ( let u = 0; u<county.length; u++){
+                console.log(county[u]);
+            }
+            for (let each of county){
+                console.log(each.length);
+            }
+
+            //6
+            //use the countries array to create the following array of arrays:
+
+
+
+
+            let county22 = [
+                  ['Albania', 'ALB', 7],
+                  ['Bolivia', 'BOL', 7],
+                  ['Canada', 'CAN', 6],
+                  ['Denmark', 'DEN', 7],
+                  ['Ethiopia','ETH', 8],
+                  ['Finland', 'FIN', 7],
+                  ['Germany', 'GER', 7],
+                  ['Hungary', 'HUN', 7],
+                  ['Ireland', 'IRE', 7],
+                  ['Iceland', 'ICE', 7],
+                  ['Japan', 'JAP', 5],
+                  ['Kenya', 'KEN', 5]]
+                  for (let s = 0; s<county22.length; s++){
+                    console.log(county22[s]);
+                  }
+
+                  //7
+                  //in above countries array, check if check if there is a country or countries containing the word "land. if there is no country containing the word land, print all these countries are without "land"
+
+
+            
+
+            let county2 = [
+                  ['Albania', 'ALB', 7],
+                  ['Bolivia', 'BOL', 7],
+                  ['Canada', 'CAN', 6],
+                  ['Denmark', 'DEN', 7],
+                  ['Ethiopia','ETH', 8],
+                  ['Finland', 'FIN', 7],
+                  ['Germany', 'GER', 7],
+                  ['Hungary', 'HUN', 7],
+                  ['Ireland', 'IRE', 7],
+                  ['Iceland', 'ICE', 7],
+                  ['Japan', 'JAP', 5],
+                  ['Kenya', 'KEN', 5]]
+                  for (let v = 0; v<county2.length; v++){
+                    if (county2[v][0].includes('land')){
+                    console.log(county[v][0]);
+
+                    } else{
+                        console.log('they are without land')
+                  }
+                }
+
+
+                //8
+
+                //in above countries array, check if check if there is a country or countries end with a substring "ia. if there are countries end with, print it as array. if there is no country containing the word "ai", print these are countries ends without "ia".
+
+                let country3 = [
+                  ['Albania', 'ALB', 7],
+                  ['Bolivia', 'BOL', 7],
+                  ['Canada', 'CAN', 6],
+                  ['Denmark', 'DEN', 7],
+                  ['Ethiopia','ETH', 8],
+                  ['Finland', 'FIN', 7],
+                  ['Germany', 'GER', 7],
+                  ['Hungary', 'HUN', 7],
+                  ['Ireland', 'IRE', 7],
+                  ['Iceland', 'ICE', 7],
+                  ['Japan', 'JAP', 5],
+                  ['Kenya', 'KEN', 5]]
+                  for (let j = 0; j<country3.length; j++) {
+                if (country3[j][0].includes('ia')){
+                            console.log(country3[j][0])
+                        }else{ 
+                            console.log('no country has ia')
+
+                        }
+                    }
+
+                    //9
+                    //using the above countries array, find the country the biggest number of charactes.
+
+                 
+
+let co = ["Albania", "Bolivia'",'Canada' , 'Denmark', 'Ethiopia', 'Finland', 'Germany', 'Hungary', 'Ireland',
+    'Japan', 'Kenya'];
+        let big = '';
+        for (let i = 0; i < co.length; i++) {
+            if (big.length<=co[i].length) {
+                big = co[i];
+            }
+        }
+        console.log(big);
+
+        //10
+                  //using the above countries array, find the country containing only 5 characters
+
+    //               let coo = ["Albania", "Bolivia'",'Canada' , 'Denmark', 'Ethiopia', 'Finland', 'Germany', 'Hungary', 'Ireland',
+    // 'Japan', 'Kenya'];
+    //     let biggest = '';
+    //     for (let i = 0; i < coo.length; i++) {
+    //       console.log(i.len)
+    //         // if (coo.length===5) {
+        //         biggest = coo[i][0];
+        //     }
+        // }
+        // console.log(biggest);
+
+        // for (let i of coo){
+        //   console.log(i.lenght)
+        // //   if(i.lenght===5)
+        //     console.log(i)
+        // } else{
+        //   console.log('rest')
+        // }
+
+
+
+
+         
+                  
+                  //12
+                  //use the webtechs array to create the following arrays of arrays:
+
+                  const webT = [
+                ["HTML", 4],
+                ["CSS", 3],
+                ["javaScript", 10],
+                ["React", 5],
+                ["Redux", 5],
+                ["Node", 4],
+                ["MongoDB", 7]];
+
+                    for ( let  i= 0; i<webT.length; i++ ){
+                        console.log(webT[i]);
+                    }
+                    // console.log(webT[0])
+
+
+                    //13
+
+                    // An application created using MongoDB, express, react, and node is called a MERN stack app. create the acronym MERN by using the array mernStack.
+
+                    let mernStack = ['MongoDB', 'Express', 'React', 'Node']
+                    for ( let i = 0; i<mernStack.length; i++){
+                      
+                      console.log(mernStack[i][0]);
+                    }
+
+                    //14
+                    // iterate through the ARRAY , ["HTML", "CSS", "JS", "REACT", "REDUX", "NODE", "EXPRESS", "MongoDB"] using a for loop or for of loop and print out the items.
+
+                    // let frontEnd = [ 
+                    // ["HTML" 4]
+                    //   ["JS" 2], 
+                    //   ["REACT" 5],
+                    //    ["REDUX" 5],
+                    //     ["NODE" 4], 
+                    //     ["EXPRESS" 7],
+                    //      ["MongoDB" 7]]
+
+                    // for (let each of frontEnd){
+                    //   console.log(each);
+                    // }
+
+                    //15
+                    // This is a fruit array, ['banana', 'orange', 'mango', 'lemon'] reverse the order of the array using loop without using a reverse method.
+
+                    let fruit =  ['banana', 'orange', 'mango', 'lemon']
+                    fruitArray = [];
+                    if (let i = 0; i<fruit.length; i++){
+                    fruitArray.unshift(fruit[i])
+                  }
+                  console.log(fruitArray[i]);
+
+
+
+                  
+                
+
+                
+
+
+    
+
+
+                  
+                  
+
+
+
+
+
+                
+
+
+
+
+
+
+
+
+
+                
+
+
+
+
+
+        // // 9. Country with biggest number of character
+        // let countries = ["asdfghghj", "asdfjhbdsjbvj", 'ajsbvklasbv', 'edo', 'hjbfjlfd', 'jfb', 'jhbfsdrurijbfs'];
+        // let biggest = '';
+        // for (let i = 0; i < countries.length; i++) {
+        //     if (biggest.length<=countries[i].length) {
+        //         biggest = countries[i];
+        //     }
+        // }
+        // console.log(biggest);
+    </script>
+</body>
+</html>
